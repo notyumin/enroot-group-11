@@ -13,11 +13,17 @@ npm run dev
 
 This project was created for EnROOT Group 11's event, **Freshmore Faceoff**!
 
-This Next.js website provides key information to participants, such as: 
+This website provides key information to participants, such as: 
 - Match Schedules/Results
 - Tournament Format
 - Game Rules
 - Prizes
+
+# Tech Stack
+- Next.js
+- Tailwind CSS
+- SQLite
+- Vercel
 
 ## Resources used
 - [Next.js Basics](https://nextjs.org/learn/dashboard-app/getting-started)

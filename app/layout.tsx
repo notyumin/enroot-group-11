@@ -34,14 +34,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased w-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased w-screen h-screen flex flex-col`}
       >
-        <div className="flex w-full justify-center bg-white text-background">
+        <div className="flex w-full justify-center bg-white text-background p-1">
           {navLinks.map((nav) => {
             return <a className="m-2" key={nav.name} href={nav.url}>{nav.name}</a>
           })}
         </div>
-        {children}
+        <div className="m-2 grow">{children}</div>
       </body>
     </html>
   );

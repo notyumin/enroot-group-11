@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Link from "next/link";
+import { bungee } from "./ui/fonts";
+// import { usePathname } from "next/navigation";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,9 +21,14 @@ export const metadata: Metadata = {
   description: "Presented by EnROOT Group 11",
 };
 
-const navLinks = [
+type NavLink = {
+  url: string,
+  name: string
+}
+
+const navLinks: NavLink[] = [
   { url: "/", name: "Home" },
-  // { url: "./schedule", name: "Schedule" },
+  { url: "./schedule", name: "Schedule" },
   // { url: "./bracket", name: "Bracket" },
   // { url: "./rules", name: "Rules" },
   // { url: "./admin", name: "Admin" },
@@ -31,18 +39,29 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // const currentPath = usePathname()
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased w-screen h-screen flex flex-col`}
       >
-        <div className="flex w-full justify-center bg-white text-background p-1">
+        <div className="flex w-full justify-center bg-white text-background p-1 lg:text-xl md:text-base text-sm sticky top-0">
           {navLinks.map((nav) => {
-            return <a className="m-2" key={nav.name} href={nav.url}>{nav.name}</a>
+            return <Link className={bungee.className + " m-2 lg:mx-5"} key={nav.name} href={nav.url}>{nav.name}</Link>
           })}
         </div>
-        <div className="m-2 grow">{children}</div>
+        <div className="grow">{children}</div>
       </body>
     </html>
   );
 }
+
+// const NavBar = (navLinks: NavLink[]) => {
+//   return (
+//     <div className="flex w-full justify-center bg-white text-background p-1">
+//       {navLinks.map((nav) => {
+//         return <Link className="m-2" key={nav.name} href={nav.url}>{nav.name}</Link>
+//       })}
+//     </div>
+//   )
+// }

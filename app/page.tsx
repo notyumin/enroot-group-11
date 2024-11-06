@@ -1,11 +1,17 @@
-import { bungeeShade } from "./ui/fonts";
+import { bungeeInline, bungee, lobster } from "./ui/fonts";
 
 export default function Home() {
   return (
-    <div className="flex justify-center items-center h-full">
-      <div className={bungeeShade.className + " text-8xl text-center max-w-screen-md"}>
-        Welcome to Freshmore Faceoff!
+    <div className="flex flex-col justify-center items-center h-full">
+      <div className={lobster.className + " lg:text-6xl md:text-5xl text-3xl text-center max-w-screen-md mb-5"}>
+        Welcome to
       </div >
-    </div>
+      <div className={bungeeInline.className + " lg:text-11xl md:text-8xl text-5xl text-center max-w-screen-md"}>
+        Freshmore Faceoff!
+      </div >
+      <div className={bungee.className + " m-8 lg:text-3xl md:text-2xl text-xl text-center"}>
+        ISH 2 &nbsp;| &nbsp;13 Nov &nbsp;| &nbsp;2pm-5pm
+      </div>
+    </div >
   );
 }

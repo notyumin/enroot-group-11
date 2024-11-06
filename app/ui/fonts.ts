@@ -1,3 +1,5 @@
-import { Bungee_Shade } from "next/font/google"
+import { Bungee_Inline, Bungee, Lobster } from "next/font/google"
 
-export const bungeeShade = Bungee_Shade({ weight: "400", subsets: ["latin"] })
+export const bungeeInline = Bungee_Inline({ weight: "400", subsets: ["latin"] })
+export const bungee = Bungee({ weight: "400", subsets: ["latin"] })
+export const lobster = Lobster({ weight: "400", subsets: ["latin"] })

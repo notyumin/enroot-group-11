@@ -30,7 +30,7 @@ const navLinks: NavLink[] = [
   { url: "/", name: "Home" },
   { url: "./schedule", name: "Schedule" },
   // { url: "./fixtures/", name: "Fixtures" },
-  { url: "./rules", name: "Rules" },
+  // { url: "./rules", name: "Rules" },
   // { url: "./admin", name: "Admin" },
 ]
 

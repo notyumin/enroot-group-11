@@ -1,6 +1,6 @@
 # EnROOT Group 11
 
-Access the page by clicking [here!](https://example.com)
+Access the page by clicking [here!](https://enroot-group-11.vercel.app)
 
 Alternatively, run the site locally by running the following commands:
 > Note: You'll need to have Node/NPM installed!

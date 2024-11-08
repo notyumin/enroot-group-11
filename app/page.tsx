@@ -6,7 +6,7 @@ export default function Home() {
       <div className={lobster.className + " lg:text-6xl md:text-5xl text-3xl text-center max-w-screen-md mb-5"}>
         Welcome to
       </div >
-      <div className={bungeeInline.className + " lg:text-11xl md:text-8xl text-5xl text-center max-w-screen-md"}>
+      <div className={bungeeInline.className + " lg:text-9xl md:text-8xl text-5xl text-center max-w-screen-lg text-yellow-200"}>
         Freshmore Faceoff!
       </div >
       <div className={bungee.className + " m-8 lg:text-3xl md:text-2xl text-xl text-center"}>

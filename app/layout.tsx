@@ -29,8 +29,8 @@ type NavLink = {
 const navLinks: NavLink[] = [
   { url: "/", name: "Home" },
   { url: "./schedule", name: "Schedule" },
-  // { url: "./bracket", name: "Bracket" },
-  // { url: "./rules", name: "Rules" },
+  // { url: "./fixtures/", name: "Fixtures" },
+  { url: "./rules", name: "Rules" },
   // { url: "./admin", name: "Admin" },
 ]
 
@@ -45,10 +45,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased w-screen h-screen flex flex-col`}
       >
-        <div className="flex w-full justify-center bg-white text-background p-1 lg:text-xl md:text-base text-sm sticky top-0">
-          {navLinks.map((nav) => {
-            return <Link className={bungee.className + " m-2 lg:mx-5"} key={nav.name} href={nav.url}>{nav.name}</Link>
-          })}
+        <div className="flex w-full justify-center sticky top-5">
+          <div className="bg-gray-50 text-slate-800 p-5 lg:text-xl md:text-base text-sm rounded-full shadow-lg">
+            {navLinks.map((nav) => {
+              return <Link className={bungee.className + " m-2 lg:mx-5 hover:text-background"} key={nav.name} href={nav.url}>{nav.name}</Link>
+            })}
+          </div>
         </div>
         <div className="grow">{children}</div>
       </body>

@@ -45,7 +45,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased w-screen h-screen flex flex-col`}
       >
-        <div className="flex w-full justify-center sticky top-5">
+        <div className="flex w-full justify-center fixed top-5">
           <div className="bg-gray-50 text-slate-800 p-5 lg:text-xl md:text-base text-sm rounded-full shadow-lg">
             {navLinks.map((nav) => {
               return <Link className={bungee.className + " m-2 lg:mx-5 hover:text-background"} key={nav.name} href={nav.url}>{nav.name}</Link>

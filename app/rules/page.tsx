@@ -16,30 +16,33 @@ const formatRules: FormatRule[] = [
   {
     label: "Group Stage",
     rule: [
-      "The 11 teams will be split into 3 groups (4, 4, 3).",
+      "The 8 teams will be split into 2 groups.",
       "Each group will play round-robin against each other.",
       "A win earns 3 points, a draw 1 point, and a loss 0 points.",
       "The top team from each group will qualify to the finals."
     ],
   },
-  { label: "Finals", rule: ["The top 3 teams will compete in a 3-way free-for-all final match.", "The winner takes it all!"], },
+  { label: "Finals", rule: ["The top 2 teams will compete in a final match.", "The winner takes it all!"], },
 ]
 
 const gameRules: Rule[] = [
-  { label: "1", rule: "Each game lasts 10 minutes, with no stoppages." },
-  { label: "2", rule: "When the game starts, players run forward to collect balls." },
-  { label: "3", rule: "Players are not allowed to enter the No-Man Zone (refer to diagram below)" },
-  { label: "4", rule: "Players throw balls at their opponents to strike them out." },
-  { label: "5", rule: "If a player catches a ball thrown by the other team, the person who threw the ball is out." },
-  { label: "6", rule: "If a team's players are all struck out, that team loses." },
-  { label: "7", rule: "At the end of the 10 minutes, the team with most players left wins!" },
+  { label: "01", rule: "Games are 7v7, with remaining players are subtitutes. Substitutions can be made freely between games." },
+  { label: "02", rule: "Each game lasts 10 minutes, with no stoppages." },
+  { label: "03", rule: "When the game starts, players run forward to collect balls." },
+  { label: "04", rule: "Players are not allowed to enter the No-Man Zone (refer to diagram below)." },
+  { label: "05", rule: "Players throw balls at their opponents to get them out." },
+  { label: "06", rule: "If a player catches a ball thrown by the other team, the person who threw the ball is out." },
+  { label: "07", rule: "Alternatively, you can use a ball in your hand to deflect the other team's balls." },
+  { label: "08", rule: "Balls that go out of bounds are returned to the nearest team." },
+  { label: "09", rule: "If a team's players are all struck out, that team loses." },
+  { label: "10", rule: "At the end of the 10 minutes, the team with most players left wins!" },
 ]
 
 const safetyRules: Rule[] = [
-  { label: "1", rule: "Do not throw the ball at anyone's face, groin, or other sensitive parts." },
-  { label: "2", rule: "Respect the referee's calls. " },
-  { label: "3", rule: "Do not walk across the courts when a game is ongoing if you're not playing" },
-  { label: "4", rule: "If feeling unwell at any time, immediately inform a referee or organiser." },
+  { label: "01", rule: "Do not throw the ball at anyone's face, groin, or other sensitive parts." },
+  { label: "02", rule: "Respect the referee's calls." },
+  { label: "03", rule: "Do not walk across the courts when a game is ongoing if you're not playing." },
+  { label: "04", rule: "If feeling unwell at any time, immediately inform a referee or organiser." },
 ]
 
 export default function Page() {
@@ -57,7 +60,6 @@ export default function Page() {
                 })}
               </ul>
             </div>
-            {/* {(rule.image) && } */}
           </div>)
         })}
       </div>

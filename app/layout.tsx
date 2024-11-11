@@ -1,20 +1,7 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Link from "next/link";
-import { bungee } from "./ui/fonts";
-// import { usePathname } from "next/navigation";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { bungee, geistMono, geistSans } from "./ui/fonts";
 
 export const metadata: Metadata = {
   title: "Freshmore Faceoff!",
@@ -29,9 +16,8 @@ type NavLink = {
 const navLinks: NavLink[] = [
   { url: "/", name: "Home" },
   { url: "./schedule", name: "Schedule" },
-  // { url: "./fixtures/", name: "Fixtures" },
   { url: "./rules", name: "Rules" },
-  // { url: "./admin", name: "Admin" },
+  // { url: "./fixtures/", name: "Fixtures" },
 ]
 
 export default function RootLayout({
@@ -39,7 +25,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // const currentPath = usePathname()
   return (
     <html lang="en">
       <body
@@ -57,13 +42,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-// const NavBar = (navLinks: NavLink[]) => {
-//   return (
-//     <div className="flex w-full justify-center bg-white text-background p-1">
-//       {navLinks.map((nav) => {
-//         return <Link className="m-2" key={nav.name} href={nav.url}>{nav.name}</Link>
-//       })}
-//     </div>
-//   )
-// }
